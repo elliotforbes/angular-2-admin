@@ -2,20 +2,28 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { RouterModule, Routes } from '@angular/router';
 
 /*
  * Base Components
  */
 import { AppComponent } from './app.component';
-import { UserComponent } from './user/user.component';
-import { ArticleComponent } from './article/article.component';
-import { CourseComponent } from './course/course.component';
-import { TagComponent } from './tag/tag.component';
-import { EmailComponent } from './email/email.component';
-import { SettingsComponent } from './settings/settings.component';
-import { BlogComponent } from './blog/blog.component';
+import { UserComponent } from './components/user/user.component';
+import { ArticleComponent } from './components/article/article.component';
+import { CourseComponent } from './components/course/course.component';
+import { TagComponent } from './components/tag/tag.component';
+import { EmailComponent } from './components/email/email.component';
+import { SettingsComponent } from './components/settings/settings.component';
+import { BlogComponent } from './components/blog/blog.component';
 import { TopNavComponent } from './common/top-nav/top-nav.component';
+import { HomeComponent } from './components/home/home.component';
 
+
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'users', component: UserComponent },
+  { path: 'articles', component: ArticleComponent }
+]
 
 
 @NgModule({
@@ -28,7 +36,8 @@ import { TopNavComponent } from './common/top-nav/top-nav.component';
     EmailComponent,
     SettingsComponent,
     BlogComponent,
-    TopNavComponent
+    TopNavComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
