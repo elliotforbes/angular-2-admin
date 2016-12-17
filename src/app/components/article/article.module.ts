@@ -5,11 +5,8 @@ import { NewArticleComponent } from './new-article/new-article.component';
 import { RouterModule, Routes } from '@angular/router';
 
 export const articleRoutes:Routes = [
-  { path: 'articles', component: ArticleComponent,
-    children: [
-      { path: 'new', component: NewArticleComponent }
-    ]
-  }
+  { path: 'articles', component: ArticleComponent},
+  { path: 'article/new', component: NewArticleComponent }
 ]
 
 @NgModule({
