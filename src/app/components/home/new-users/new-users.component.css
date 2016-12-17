@@ -1,0 +1,24 @@
+table img {
+  width: 25px;
+  height: 25px;
+}
+
+table thead th {
+    font-weight: 600;
+    font-size: 13px;
+    color: #93a2a9;
+    border: 0;
+    border-bottom: 1px solid #F2F5F8;
+}
+
+span{
+    font-size: 27px;
+    line-height: 27px;
+    color: #7D8C9D;
+    margin: 20px;
+    text-align: center;
+}
+
+.total-users {
+  margin-top: 20px;
+}

@@ -1,11 +1,17 @@
 <nav>
 	<div class="nav-wrapper">
-		<a href="#" class="brand-logo">Angular Admin Dashboard</a>
+		<a routerLink="/" class="brand-logo">Angular Admin Dashboard</a>
 		<ul id="nav-mobile" class="right hide-on-med-and-down">
-			<li><a routerLink="/users">Users</a></li>
-			<li><a>Courses</a></li>
 			<li><a routerLink="/articles">Articles</a></li>
-			<li><a>Settings</a></li>
+      <li><a routerLink="/users">Users</a></li>
+			<li><a routerLink="/courses">Courses</a></li>
+			<li><a routerLink="/settings">Settings</a></li>
 		</ul>
 	</div>
 </nav>
+
+<div class="page-header">
+  <div class="nav-wrapper">
+    <h6>{{ route }} </h6>
+  </div>
+</div>
