@@ -14,7 +14,7 @@ import { CourseComponent } from './components/course/course.component';
 import { TagComponent } from './components/tag/tag.component';
 import { EmailComponent } from './components/email/email.component';
 import { SettingsComponent } from './components/settings/settings.component';
-import { BlogComponent } from './components/blog/blog.component';
+import { BlogModule } from './components/blog/blog.module';
 import { TopNavComponent } from './common/top-nav/top-nav.component';
 import { HomeComponent } from './components/home/home.component';
 import { UserGrowthComponent } from './components/home/user-growth/user-growth.component';
@@ -39,7 +39,6 @@ const appRoutes: Routes = [
     TagComponent,
     EmailComponent,
     SettingsComponent,
-    BlogComponent,
     TopNavComponent,
     HomeComponent,
     UserGrowthComponent,
@@ -52,6 +51,7 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule,
     ArticleModule,
+    BlogModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

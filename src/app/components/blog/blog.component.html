@@ -1,3 +1,61 @@
-<p>
-  blog works!
-</p>
+<div class="row">
+	<div class="col s12 m8 l8">
+		<div class="component">
+			<div class="component-title">
+				<h2>All Users</h2>
+			</div>
+			<div class="component-body">
+        <br/>
+				<table>
+					<thead>
+						<th>Author</th>
+						<th>Title</th>
+            <th>slug</th>
+						<th>Published</th>
+						<th>Updated</th>
+            <th>View</th>
+					</thead>
+					<tbody>
+						<tr *ngFor="let blog of blogs">
+							<td>
+								<img class="circle responsive-img" src="https://avatars1.githubusercontent.com/u/3332224?v=3&s=460" />
+							</td>
+							<td>{{ blog.title }}</td>
+							<td>{{ blog.slug }}</td>
+							<td>{{ blog.created_at }}</td>
+							<td>{{ blog.updated_at }}</td>
+							<td>
+								<a class="btn-floating"><i class="ion ion-ios-search"></i></a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<ul class="pagination">
+					<li class="disabled"><a href="#!"><i class="ion ion-chevron-left"></i></a></li>
+					<li class="active"><a href="#!">1</a></li>
+					<li class="waves-effect"><a href="#!">2</a></li>
+					<li class="waves-effect"><a href="#!"><i class="ion ion-chevron-right"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="col s12 m4 l4">
+		<div class="component">
+			<div class="component-title">
+				<h2>Search</h2>
+			</div>
+			<div class="component-body">
+				<br/>
+				<div class="input-field">
+					<input id="blog_title" type="text" class="validate">
+					<label class="active" for="blog_title">Blog Title</label>
+				</div>
+				<div>
+					<button class="btn" type="submit" name="action"><i class="ion ion-search"></i> Search</button>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+</div>
