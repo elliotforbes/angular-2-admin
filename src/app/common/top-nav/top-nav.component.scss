@@ -1,6 +1,7 @@
 nav {
   background-color: #444d58;
   font-weight: 200;
+  box-shadow: none;
 }
 
 .brand-logo {
@@ -29,7 +30,7 @@ nav {
     margin: 0 auto;
     width: 100%;
     white-space: nowrap;
-
+    box-shadow: none;
     .tab{
         display: block;
         float: left;
@@ -44,6 +45,7 @@ nav {
         letter-spacing: .8px;
         width: 15%;
         min-width: 80px;
+        box-shadow: none;
 
         img {
             width: 15px;
