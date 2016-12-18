@@ -9,12 +9,9 @@ import { RouterModule, Routes } from '@angular/router';
  */
 import { AppComponent } from './app.component';
 import { UserComponent } from './components/user/user.component';
-import { ArticleModule } from './components/article/article.module';
-import { CourseComponent } from './components/course/course.component';
 import { TagComponent } from './components/tag/tag.component';
 import { EmailComponent } from './components/email/email.component';
 import { SettingsComponent } from './components/settings/settings.component';
-import { BlogModule } from './components/blog/blog.module';
 import { TopNavComponent } from './common/top-nav/top-nav.component';
 import { HomeComponent } from './components/home/home.component';
 import { UserGrowthComponent } from './components/home/user-growth/user-growth.component';
@@ -23,10 +20,18 @@ import { NewUsersComponent } from './components/home/new-users/new-users.compone
 import { TopArticlesComponent } from './components/home/top-articles/top-articles.component';
 
 
+/*
+ * Standalone Modules
+ */ 
+import { ArticleModule } from './components/article/article.module';
+import { BlogModule } from './components/blog/blog.module';
+import { CourseModule } from './components/course/course.module';
+
+
+
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'users', component: UserComponent },
-  { path: 'courses', component: CourseComponent },
   { path: 'settings', component: SettingsComponent }
 ]
 
@@ -35,7 +40,6 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     UserComponent,
-    CourseComponent,
     TagComponent,
     EmailComponent,
     SettingsComponent,
@@ -52,6 +56,7 @@ const appRoutes: Routes = [
     HttpModule,
     ArticleModule,
     BlogModule,
+    CourseModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
