@@ -6,10 +6,12 @@ import { ArticleService } from './article.service';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { EditArticleComponent } from './edit-article/edit-article.component';
 
-export const articleRoutes:Routes = [
-  { path: 'articles', component: ArticleComponent},
-  { path: 'article/new', component: NewArticleComponent }
+export const articleRoutes: Routes = [
+  { path: 'articles', component: ArticleComponent },
+  { path: 'article/new', component: NewArticleComponent },
+  { path: 'article/edit/:id', component: EditArticleComponent }
 ]
 
 @NgModule({
@@ -19,7 +21,7 @@ export const articleRoutes:Routes = [
     CommonModule,
     RouterModule.forChild(articleRoutes)
   ],
-  declarations: [ArticleComponent, NewArticleComponent],
+  declarations: [ArticleComponent, NewArticleComponent, EditArticleComponent],
   providers: [
     ArticleService
   ]

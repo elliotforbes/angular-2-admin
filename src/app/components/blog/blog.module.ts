@@ -4,6 +4,8 @@ import { BlogComponent } from './blog.component';
 import { BlogNewComponent } from './blog-new/blog-new.component';
 import { RouterModule, Routes } from '@angular/router';
 import { BlogService } from './blog.service';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
 export const blogRoutes:Routes = [
   { path: 'blog', component: BlogComponent },
@@ -12,6 +14,8 @@ export const blogRoutes:Routes = [
 
 @NgModule({
   imports: [
+    FormsModule,
+    BrowserModule,
     CommonModule,
     RouterModule.forChild(blogRoutes)
   ],

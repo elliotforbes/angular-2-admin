@@ -27,7 +27,7 @@ body {
 }
 
 .component-body {
-  padding-top: 20px;
+  padding-top: 2r0px;
 }
 
 table img {
@@ -41,4 +41,51 @@ table thead th {
     color: #93a2a9;
     border: 0;
     border-bottom: 1px solid #F2F5F8;
+}
+
+.component-body {
+  margin-top: 40px;
+}
+
+.clear {
+  clear: both;
+  height: 40px;
+}
+.input-field {
+  margin-top: 0;
+}
+
+.rendered-article {
+  border: none;
+  border-right: 1px solid #ccc;
+  resize: none;
+  outline: none;
+  background-color: #f6f6f6;
+  font-size: 14px;
+  font-family: 'Monaco', courier, monospace;
+  padding: 20px;
+  min-height: 671px;
+}
+
+textarea, #editor div {
+  display: inline-block;
+  height: 100%;
+  vertical-align: top;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+textarea {
+  border: none;
+  border-right: 1px solid #ccc;
+  resize: none;
+  outline: none;
+  background-color: #f6f6f6;
+  font-size: 14px;
+  font-family: 'Monaco', courier, monospace;
+  padding: 20px;
+}
+
+code {
+  color: #f66;
 }
