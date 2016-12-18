@@ -2,9 +2,27 @@
 
 This project was built to demonstrate some of the concepts covered in [Angular 2 Fundamentals](https://tutorialedge.net/course/angular-2-fundamentals). 
 
+### Features
+
+* Angular Router with sub-routes contained in sub-modules
+* Markdown editor using Marked 
+* Built using angular-cli
+* Examples of Services, Observables, Modules and Sub Modules
+
 ### Screenshot:
 
 ![Angular 2 Admin Dashboard](screenshot.png?raw=true)
+
+![Markdown editor](markdown-editor.png?raw=true)
+
+![Article search page](search-articles.png?raw=true)
+
+### Future Enhancements:
+
+In the very near future I'm hoping to integrate social media platforms such as Twitter and Facebook and possibly Reddit in their own services so that they can
+be called whenever say a new blog post is written etc.
+
+I will also be implementing a graph library so that you can accurately see things such as growth etc.
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

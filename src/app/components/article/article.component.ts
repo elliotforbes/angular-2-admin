@@ -8,11 +8,9 @@ import { ArticleService } from './article.service';
 })
 export class ArticleComponent implements OnInit {
 
-  private articleService: ArticleService;
-
   private articles: any;
 
-  constructor(articleService: ArticleService) { 
+  constructor(private articleService: ArticleService) { 
     articleService.getArticles().subscribe(
         articles => {
           this.articles = articles.lessons.data;
@@ -23,8 +21,5 @@ export class ArticleComponent implements OnInit {
       );
   }
 
-  ngOnInit() {
-
-  }
-
+  ngOnInit() { }
 }
