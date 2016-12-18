@@ -3,7 +3,9 @@ body {
   background-color: #eff3f8;
 }
 
-
+.clear {
+  clear :both;
+}
 
 .component {
   background-color: white;

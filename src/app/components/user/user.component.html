@@ -1,3 +1,65 @@
-<p>
-  user works!
-</p>
+<div class="row">
+	<div class="col s12 m8 l8">
+		<div class="component">
+			<div class="component-title">
+				<h2>All Users</h2>
+			</div>
+			<div class="component-body">
+        <br/>
+				<table>
+					<thead>
+						<th>Avatar</th>
+						<th>Name</th>
+            <th>Nickname</th>
+						<th>Email</th>
+						<th>Provider</th>
+						<th>Provider ID</th>
+						<th>Date Joined</th>
+            <th>View</th>
+					</thead>
+					<tbody>
+						<tr *ngFor="let user of users">
+							<td>
+								<img class="circle responsive-img" src="https://avatars1.githubusercontent.com/u/3332224?v=3&s=460" />
+							</td>
+							<td>{{ user.name }}</td>
+							<td>{{ user.nickname }}</td>
+							<td>{{ user.email }}</td>
+							<td>{{ user.provider }}</td>
+							<td>{{ user.provider_id }}</td>
+							<td>{{ user.created_at }}</td>
+							<td>
+								<a class="btn-floating"><i class="ion ion-ios-search"></i></a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<ul class="pagination">
+					<li class="disabled"><a href="#!"><i class="ion ion-chevron-left"></i></a></li>
+					<li class="active"><a href="#!">1</a></li>
+					<li class="waves-effect"><a href="#!">2</a></li>
+					<li class="waves-effect"><a href="#!"><i class="ion ion-chevron-right"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="col s12 m4 l4">
+		<div class="component">
+			<div class="component-title">
+				<h2>Search</h2>
+			</div>
+			<div class="component-body">
+				<br/>
+				<div class="input-field">
+					<input id="user_name" type="text" class="validate">
+					<label class="active" for="user_name">User Name</label>
+				</div>
+				<div>
+					<button class="btn" type="submit" name="action"><i class="ion ion-search"></i> Search</button>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+</div>
