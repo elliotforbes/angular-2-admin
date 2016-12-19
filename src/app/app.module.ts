@@ -8,7 +8,6 @@ import { RouterModule, Routes } from '@angular/router';
  * Base Components
  */
 import { AppComponent } from './app.component';
-import { UserComponent } from './components/user/user.component';
 import { TagComponent } from './components/tag/tag.component';
 import { EmailComponent } from './components/email/email.component';
 import { SettingsComponent } from './components/settings/settings.component';
@@ -26,12 +25,12 @@ import { TopArticlesComponent } from './components/home/top-articles/top-article
 import { ArticleModule } from './components/article/article.module';
 import { BlogModule } from './components/blog/blog.module';
 import { CourseModule } from './components/course/course.module';
+import { UserModule } from './components/user/user.module';
 
 
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'users', component: UserComponent },
   { path: 'settings', component: SettingsComponent },
   { path: 'email', component: EmailComponent }
 ]
@@ -40,7 +39,6 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent,
     TagComponent,
     EmailComponent,
     SettingsComponent,
@@ -58,6 +56,7 @@ const appRoutes: Routes = [
     ArticleModule,
     BlogModule,
     CourseModule,
+    UserModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

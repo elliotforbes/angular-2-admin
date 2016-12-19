@@ -34,7 +34,7 @@
           <td>{{ user.provider_id }}</td>
           <td>{{ user.created_at }}</td>
           <td>
-            <a class="btn-floating"><i class="ion ion-ios-search">add</i></a>
+            <a routerLink="/users/edit/{{ user.id }}" class="btn-floating"><i class="ion ion-ios-search">add</i></a>
           </td>
         </tr>
       </tbody>

@@ -24,6 +24,13 @@ export class NewUsersComponent implements OnInit {
       },err => {
         console.log(err);
       });
+
+    this.userService.getGrowth()
+      .subscribe(growth => {
+        this.weekGrowth = growth.growth[0];
+      }, err => {
+        console.log(err);
+      });
   }
 
   ngOnInit() {

@@ -13,4 +13,10 @@ export class UserService {
       .catch((error:any) => Observable.throw(error.json().error || 'Server Error'));
   }
 
+  getGrowth () {
+    return this.http.get("http://localhost:8000/api/users/growth")
+      .map((res:Response) => res.json())
+      .catch((error:any) => Observable.throw(error.json().error || "Server Error"));
+  }
+
 }
