@@ -6,10 +6,10 @@
 
     <div class="row total-users center-align">
       <div class="col l6">
-        <p>Total Users: <span>160</span></p>
+        <p>Total Users: <span>{{ totalUsers }}</span></p>
       </div>
       <div class="col l6">
-        <p>This Week: <span>+ 23</span></p>
+        <p>This Week: <span>+ {{ weekGrowth }}</span></p>
       </div>
     </div>
 
@@ -18,43 +18,21 @@
         <th>Avatar</th>
         <th>Username</th>
         <th>Email</th>
+        <th>Provider</th>
         <th>Provider ID</th>
         <th>Date Joined</th>
         <th>View</th>
       </thead>
       <tbody>
-        <tr>
+        <tr *ngFor="let user of users">
           <td>  
             <img class="circle responsive-img" src="https://avatars1.githubusercontent.com/u/3332224?v=3&s=460"/>
           </td>
-          <td>Elliot Forbes</td>
-          <td>elliot@elliotforbes.co.uk</td>
-          <td>twitter</td>
-          <td>2016-12-14</td>
-          <td>
-            <a class="btn-floating"><i class="ion ion-ios-search">add</i></a>
-          </td>
-        </tr>
-        <tr>
-          <td>  
-            <img class="circle responsive-img" src="https://avatars1.githubusercontent.com/u/3332224?v=3&s=460"/>
-          </td>
-          <td>Elliot Forbes</td>
-          <td>elliot@elliotforbes.co.uk</td>
-          <td>twitter</td>
-          <td>2016-12-14</td>
-          <td>
-            <a class="btn-floating"><i class="ion ion-ios-search">add</i></a>
-          </td>
-        </tr>
-        <tr>
-          <td>  
-            <img class="circle responsive-img" src="https://avatars1.githubusercontent.com/u/3332224?v=3&s=460"/>
-          </td>
-          <td>Elliot Forbes</td>
-          <td>elliot@elliotforbes.co.uk</td>
-          <td>twitter</td>
-          <td>2016-12-14</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.provider }}</td>
+          <td>{{ user.provider_id }}</td>
+          <td>{{ user.created_at }}</td>
           <td>
             <a class="btn-floating"><i class="ion ion-ios-search">add</i></a>
           </td>

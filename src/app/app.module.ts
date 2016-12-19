@@ -32,7 +32,8 @@ import { CourseModule } from './components/course/course.module';
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'users', component: UserComponent },
-  { path: 'settings', component: SettingsComponent }
+  { path: 'settings', component: SettingsComponent },
+  { path: 'email', component: EmailComponent }
 ]
 
 
