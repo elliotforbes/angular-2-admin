@@ -4,20 +4,20 @@
       <div class="component-title">
         <h2>Edit Article {{ id }}</h2>
       </div>
-      <div class="component-body">
+      <div *ngIf="article" class="component-body">
         <div class="row">
           <div class="input-field col s6">
-            <input id="title" type="text" class="validate">
+            <input id="title" type="text" class="validate" [(ngModel)]="article.title">
             <label class="active" for="title">Article Title</label>
           </div>
 
           <div class="input-field col s6">
-            <input id="slug" type="text" class="validate">
+            <input id="slug" type="text" class="validate" [(ngModel)]="article.slug">
             <label class="active" for="slug">Article Slug</label>
           </div>
 
           <div class="input-field col s12">
-            <input id="description" type="text" class="validate">
+            <input id="description" type="text" class="validate" [(ngModel)]="article.desc">
             <label class="active" for="description">Description</label>
           </div>
           
@@ -26,7 +26,7 @@
 
           <div class="col s6">
             <div class="input-field">
-              <textarea [(ngModel)]="body" (keyup)="updateOutput($event.target.value)" id="" cols="30" rows="30"></textarea>
+              <textarea [(ngModel)]="article.body" (keyup)="updateOutput($event.target.value)" id="" cols="30" rows="30"></textarea>
             </div>
           </div>
 

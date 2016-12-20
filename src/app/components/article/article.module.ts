@@ -4,7 +4,7 @@ import { ArticleComponent } from './article.component';
 import { NewArticleComponent } from './new-article/new-article.component';
 import { ArticleService } from './article.service';
 import { RouterModule, Routes } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { EditArticleComponent } from './edit-article/edit-article.component';
 
@@ -17,6 +17,7 @@ export const articleRoutes: Routes = [
 @NgModule({
   imports: [
     FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
     CommonModule,
     RouterModule.forChild(articleRoutes)
