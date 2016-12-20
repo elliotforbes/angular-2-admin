@@ -23,16 +23,18 @@ export class EditArticleComponent implements OnInit {
     this.article = this.articleService.getArticle(155)
       .subscribe(article => {
         this.article = article.lesson;
-        console.log(this.article);
         this.updateOutput(this.article.body);
       }, err => {
         console.log(err);
       });
   }
 
+  save (article: any) {
+    console.log(article);
+  }
+
   updateOutput(mdText: string) {
     this.convertedText = this.md.convert(mdText);
   }
-
 
 }

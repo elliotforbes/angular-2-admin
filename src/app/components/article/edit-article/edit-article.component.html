@@ -4,8 +4,14 @@
       <div class="component-title">
         <h2>Edit Article {{ id }}</h2>
       </div>
-      <div *ngIf="article" class="component-body">
+      <div *ngIf="article" class="component-body"> 
         <div class="row">
+          <div class="col s12">
+            <a class="btn" (click)="save(article)">Save Article</a>
+          </div>
+
+          <div class="clear"></div>
+
           <div class="input-field col s6">
             <input id="title" type="text" class="validate" [(ngModel)]="article.title">
             <label class="active" for="title">Article Title</label>
