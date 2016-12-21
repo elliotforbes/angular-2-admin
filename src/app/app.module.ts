@@ -26,6 +26,7 @@ import { ArticleModule } from './components/article/article.module';
 import { BlogModule } from './components/blog/blog.module';
 import { CourseModule } from './components/course/course.module';
 import { UserModule } from './components/user/user.module';
+import { SocialComponent } from './components/social/social/social.component';
 
 
 
@@ -47,7 +48,8 @@ const appRoutes: Routes = [
     UserGrowthComponent,
     NewCommentsComponent,
     NewUsersComponent,
-    TopArticlesComponent
+    TopArticlesComponent,
+    SocialComponent
   ],
   imports: [
     BrowserModule,

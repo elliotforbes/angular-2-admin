@@ -4,7 +4,6 @@ import { Article } from 'app/components/article/article';
 import { ArticleService } from 'app/components/article/article.service';
 import { MarkdownParserService } from 'app/common/services/markdown-parser.service';
 import { Observable } from 'rxjs/Rx';
-
 @Component({
   selector: 'app-edit-article',
   templateUrl: './edit-article.component.html',
@@ -17,7 +16,7 @@ export class EditArticleComponent implements OnInit {
   convertedText: string;
   article: any;
 
-  constructor(private route: ActivatedRoute, private md: MarkdownParserService, private articleService: ArticleService) {  }
+  constructor(private route: ActivatedRoute, private md: MarkdownParserService, private articleService: ArticleService) { }
 
   ngOnInit() {
     this.article = this.articleService.getArticle(155)
@@ -29,7 +28,13 @@ export class EditArticleComponent implements OnInit {
       });
   }
 
-  save (article: any) {
+  add(chip: any) {
+    console.log(chip);
+    this.article.tags.push(chip);
+    console.log(this.article);
+  } 
+
+  save(article: any) {
     console.log(article);
   }
 

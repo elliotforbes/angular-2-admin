@@ -5,7 +5,7 @@ export class Article {
     public title: string,
     public body: string,
     public desc: string,
-    public slug: string
+    public slug: string,
   ) {
     this.id = id;
     this.title = title;

@@ -4,8 +4,8 @@
       <div class="component-title">
         <h2>Edit Article {{ id }}</h2>
       </div>
-      <div *ngIf="article" class="component-body"> 
-        <div class="row">
+      <div class="component-body"> 
+        <form materialize class="row">
           <div class="col s12">
             <a class="btn" (click)="save(article)">Save Article</a>
           </div>
@@ -13,18 +13,27 @@
           <div class="clear"></div>
 
           <div class="input-field col s6">
-            <input id="title" type="text" class="validate" [(ngModel)]="article.title">
-            <label class="active" for="title">Article Title</label>
+            <input id="title" type="text" class="validate" name="firstname" [(ngModel)]="article.title">
+            <label for="title">Article Title</label>
           </div>
 
           <div class="input-field col s6">
-            <input id="slug" type="text" class="validate" [(ngModel)]="article.slug">
-            <label class="active" for="slug">Article Slug</label>
+            <input id="slug" type="text" class="validate" name="slug" [(ngModel)]="article.slug">
+            <label for="slug">Article Slug</label>
           </div>
 
-          <div class="input-field col s12">
-            <input id="description" type="text" class="validate" [(ngModel)]="article.desc">
-            <label class="active" for="description">Description</label>
+          <div class="input-field col s6">
+            <input id="description" type="text" class="validate" name="desc" [(ngModel)]="article.desc">
+            <label for="description">Description</label>
+          </div>
+
+          <div class="input-field col s6">
+            <input id="image_url" type="text" class="validate" name="image_url" [(ngModel)]="article.image_url">
+            <label for="image_url">Image URL</label>
+          </div>
+
+          <div class="col s12">
+            <div class="chips" materialize="material_chip" (chip.add)="add($event.detail)" (chip.delete)="delete($event.detail)"></div>            
           </div>
           
           <div class="clear"></div>
@@ -32,16 +41,16 @@
 
           <div class="col s6">
             <div class="input-field">
-              <textarea [(ngModel)]="article.body" (keyup)="updateOutput($event.target.value)" id="" cols="30" rows="30"></textarea>
+              <textarea [(ngModel)]="article.body" name="body" (keyup)="updateOutput($event.target.value)" id="" cols="30" rows="30"></textarea>
             </div>
           </div>
 
-          <div class="col s6">
-            <div [innerHTML]="convertedText" class="rendered-article">
+          <div class="col s6 rendered-article">
+            <div [innerHTML]="convertedText">
             </div>
           </div>
 
-        </div>
+        </form>
       </div>
     </div>
   </div>

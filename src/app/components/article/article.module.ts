@@ -7,6 +7,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { EditArticleComponent } from './edit-article/edit-article.component';
+import { MaterializeDirective } from "angular2-materialize";
+
 
 export const articleRoutes: Routes = [
   { path: 'articles', component: ArticleComponent },
@@ -22,7 +24,7 @@ export const articleRoutes: Routes = [
     CommonModule,
     RouterModule.forChild(articleRoutes)
   ],
-  declarations: [ArticleComponent, NewArticleComponent, EditArticleComponent],
+  declarations: [ArticleComponent, NewArticleComponent, EditArticleComponent, MaterializeDirective],
   providers: [
     ArticleService
   ]
