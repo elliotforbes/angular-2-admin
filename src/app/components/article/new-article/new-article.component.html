@@ -2,23 +2,48 @@
   <div class="col s12">
     <div class="component">
       <div class="component-title">
-        <h2>New Article</h2>
+        <h2>Edit Article {{ id }}</h2>
       </div>
-      <div class="component-body">
-        <div class="row">
-          <div class="input-field col s6">
-            <input id="title" type="text" class="validate">
-            <label class="active" for="title">Article Title</label>
+      <div class="component-body"> 
+        <form materialize class="row">
+          <div class="col s12">
+            <a class="btn" (click)="save(article)">Publish Article</a>
+            <a class="btn" (click)="save(article)">Save as Draft</a>
+            
           </div>
 
-          <div class="input-field col s6">
-            <input id="slug" type="text" class="validate">
-            <label class="active" for="slug">Article Slug</label>
+          <div class="clear"></div>
+
+          <div class="input-field col s4">
+            <input id="title" type="text" class="validate" name="firstname" [(ngModel)]="article.title">
+            <label for="title">Article Title</label>
           </div>
 
-          <div class="input-field col s12">
-            <input id="description" type="text" class="validate">
-            <label class="active" for="description">Description</label>
+          <div class="input-field col s8">
+            <input id="description" type="text" class="validate" name="desc" [(ngModel)]="article.desc">
+            <label for="description">Description</label>
+          </div>
+
+          <div class="input-field col s4">
+            <input id="slug" type="text" class="validate" name="slug" [(ngModel)]="article.slug">
+            <label for="slug">Article Slug</label>
+          </div>
+
+          <div class="input-field col s4">
+            <input id="image_url" type="text" class="validate" name="image_url" [(ngModel)]="article.image_url">
+            <label for="image_url">Image URL</label>
+          </div>
+
+          <div class="col input-field s4">
+            <label for="publish_at">Publish On</label>
+            <input id="publish_at"
+                   materialize="pickadate"
+                   [materializeParams]="[{selectMonths: true, selectYears: 15}]"
+                   type="text" />
+          </div> 
+
+          <div class="col s12">
+            <div class="chips chips-placeholder" materialize="material_chip" (chip.add)="add($event.detail)" [materializeParams]="[chipsPlaceholder]" (chip.delete)="delete($event.detail)"></div>            
           </div>
           
           <div class="clear"></div>
@@ -26,7 +51,7 @@
 
           <div class="col s6">
             <div class="input-field">
-              <textarea [(ngModel)]="body" (keyup)="updateOutput($event.target.value)" id="" cols="30" rows="30"></textarea>
+              <textarea [(ngModel)]="article.body" name="body" (keyup)="updateOutput($event.target.value)" id="" cols="30" rows="35"></textarea>
             </div>
           </div>
 
@@ -35,7 +60,7 @@
             </div>
           </div>
 
-        </div>
+        </form>
       </div>
     </div>
   </div>
