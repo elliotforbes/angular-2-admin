@@ -16,6 +16,11 @@ export class EditArticleComponent implements OnInit {
   convertedText: string;
   article: any;
 
+  chipsPlaceholder = {
+    placeholder: '+Tag',
+    secondaryPlaceholder: 'Enter a tag',
+  };
+
   constructor(private route: ActivatedRoute, private md: MarkdownParserService, private articleService: ArticleService) { }
 
   ngOnInit() {
@@ -23,6 +28,7 @@ export class EditArticleComponent implements OnInit {
       .subscribe(article => {
         this.article = article.lesson;
         this.updateOutput(this.article.body);
+        
       }, err => {
         console.log(err);
       });
