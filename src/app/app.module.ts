@@ -32,6 +32,7 @@ import { SocialComponent } from './components/social/social/social.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'social', component: SocialComponent },
   { path: 'settings', component: SettingsComponent },
   { path: 'email', component: EmailComponent }
 ]
