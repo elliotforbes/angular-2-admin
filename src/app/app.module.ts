@@ -27,11 +27,13 @@ import { BlogModule } from './components/blog/blog.module';
 import { CourseModule } from './components/course/course.module';
 import { UserModule } from './components/user/user.module';
 import { SocialComponent } from './components/social/social/social.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'social', component: SocialComponent },
   { path: 'settings', component: SettingsComponent },
   { path: 'email', component: EmailComponent }
@@ -50,7 +52,8 @@ const appRoutes: Routes = [
     NewCommentsComponent,
     NewUsersComponent,
     TopArticlesComponent,
-    SocialComponent
+    SocialComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
