@@ -30,6 +30,11 @@ import { SocialComponent } from './components/social/social/social.component';
 import { LoginComponent } from './components/login/login.component';
 
 
+/*
+ * Custom Libraries
+ */
+import { CookieService } from 'angular2-cookie/services/cookies.service';
+
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -53,8 +58,7 @@ const appRoutes: Routes = [
     NewUsersComponent,
     TopArticlesComponent,
     SocialComponent,
-    LoginComponent
-  ],
+    LoginComponent  ],
   imports: [
     BrowserModule,
     FormsModule,
@@ -65,7 +69,9 @@ const appRoutes: Routes = [
     UserModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [
+    CookieService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

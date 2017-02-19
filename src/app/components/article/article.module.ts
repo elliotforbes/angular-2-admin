@@ -24,7 +24,12 @@ export const articleRoutes: Routes = [
     CommonModule,
     RouterModule.forChild(articleRoutes)
   ],
-  declarations: [ArticleComponent, NewArticleComponent, EditArticleComponent, MaterializeDirective],
+  declarations: [
+    ArticleComponent, 
+    NewArticleComponent, 
+    EditArticleComponent, 
+    MaterializeDirective
+  ],
   providers: [
     ArticleService
   ]
